@@ -15,13 +15,13 @@ read aasta
 
 # kuna vanim inimene sündis 1874 aastal, siis enne seda aastat sisestatud arvu
 # ei loeta
-if [ $aasta -lt 1874 ]
+if [ $aasta -lt 1874 2>/dev/null ]
 then
 	echo "Oih! Kas teadsid, et maailma vanim inimene sündis 1875 aastal?"
 	sleep 1s; exit
 fi
 #samuti teeme if statementi, kui inimene peaks tulevikust olema
-if [ $aasta -gt $realaasta ]
+if [ $aasta -gt $realaasta 2>/dev/null ]
 then
 	echo "Back to the Future on hea film, aga vaevalt, et sa tulevikust oled!"
 	sleep 1s; exit
