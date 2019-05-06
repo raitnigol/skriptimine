@@ -12,8 +12,9 @@ echo -n "Palun sisestage kataloogi, mida soovite backupida: "; read backup
 
 # loome failinime
 day=$(date +%A)
+kpv=$(date +%Y-%m-%d)
 host=$(hostname -s)
-failinimi="$host-$day.tgz"
+failinimi="$host-$day-$kpv.tar.gz"
 # anname kausta backup kinnituse
 dest=/home/backupid/
 echo
