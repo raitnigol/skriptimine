@@ -9,6 +9,8 @@
  # date kuvab meile praeguse kellaja
  # uptime annab meile minutites, tundides, päevades või kuudes uptime
 
-echo `hostname` "at" `date +"%H:%M:%S"` `uptime -p`
+echo "Tere," `hostname`
+echo "Kellaaeg:" `date +"%H:%M:%S"`
+echo "Arvuti uptime:" `uptime -p`
 
 # siit lõppeb skript
