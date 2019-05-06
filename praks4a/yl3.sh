@@ -1,20 +1,20 @@
 #!/bin/sh
-
 # siit algab skript
 
-# see skript aitab teha backupe kaustadest ja failidest
+# skripti põhimõtteks on aidata teha oma tähtsatest failidest backupe
 
-# küsime kasutajalt, mis kataloogi ta soovib backupida
+# küsime kasutajalt, mis kataloogi ta soovib backupida jätame selle meelde
 echo -n "Palun sisestage kataloogi, mida soovite backupida: "; read backup
 
 # küsime kasutajalt, kuhu soovitakse kataloog backupida 
 # echo -n "Palun sisestage kataloog, kuhu soovite backupi luua: "; read dest
 
-# loome failinime
-day=$(date +%A)
-kpv=$(date +%Y-%m-%d)
-host=$(hostname -s)
-failinimi="$host-$day-$kpv.tar.gz"
+# failile on vaja luua adekvaatne nimi
+day=$(date +%A) # lisame kuupäeva (Monday, Tuesday) jne.
+kpv=$(date +%Y-%m-%d) # lisame kuupäeva formaadis 2019-05-02 jne.
+host=$(hostname -s) # lisame failinimele hostinime.
+failinimi="$host-$day-$kpv.tar.gz" # täielik failinimi liidetakse siin kokku
+
 # anname kausta backup kinnituse
 dest=/home/backupid/
 echo
@@ -34,6 +34,7 @@ tar -czf $failinimi $backup
 mv $failinimi $dest/$failinimi
 
 # väljastame lõpu staatuse
+sleep 1s
 echo
 echo "Backup lõpetatud!"
 
