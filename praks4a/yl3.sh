@@ -4,12 +4,6 @@
 
 # see skript aitab teha backupe kaustadest ja failidest
 
-# installeerime kasutajale igaksjuhuks tar installeri, kui seda pole
-echo "Alustan tar-i installeerimisega. Kui sul on see juba olemas, on kõik korras."
-sleep 2s
-apt-get install tar >>/dev/null
-echo "Installeerimine lõpetatud."
-
 # küsime kasutajalt, mis kataloogi ta soovib backupida
 echo -n "Palun sisestage kataloogi, mida soovite backupida: "; read backup
 
