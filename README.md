@@ -11,4 +11,5 @@ Kaustad:
 5) Praktikum 4a
 6) Praktikum 5
 
+Kasutusel on virtuaalmasin | OS Debian 9.7
 Tartu 2019
