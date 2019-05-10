@@ -9,13 +9,14 @@ echo "Esmaspäev - 1"
 echo "Teisipäev - 2"
 echo "Kolmapäev - 3"
 echo "Neljapäev - 4"
-echo     "Reede - 5"
-echo   "Laupäev - 6"
+echo  "   Reede - 5"
+echo  " Laupäev - 6"
 echo  "Pühapäev - 7"
 sleep 1s
 echo -n "Palun sisestage päeva number, millal alustate reisi: "; read reis
 sleep 1s
 echo -n "Mitu päeva viibite reisil: "; read paevad
+
 
 # arvutame, kuna tagasi jõutakse
 # arvutame, mitu päeva ollakse reisil
@@ -46,8 +47,16 @@ if [ $naasmine = 7 ]; then
 	naasmine="pühapäeval"
 fi
 
+ # filtreerime välja valesti sisestatud muutja. Kui muutuja $naasmine 
+ # väärtus peaks olema 0, on midagi viltu läinuud.
+if [ $naasmine = 0 ]; then
+	echo "Oih! Midagi on valesti. Kas sisestasid kõik korrektselt?"
+	echo "Palun proovi skripti uuesti käivitada"
+	exit
+fi
+
  # väljastame tulemuse
-echo "Reisilt jõuate Te tagasi $naasmine"
+echo "Te jõuate reisilt tagasi $naasmine."
 
 # siit lõppeb skript
 
