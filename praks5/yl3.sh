@@ -5,13 +5,13 @@
 
 # siit algab skript
 
-echo "Pühapäev - 0"
 echo "Esmaspäev - 1"
 echo "Teisipäev - 2"
 echo "Kolmapäev - 3"
 echo "Neljapäev - 4"
-echo "Reede - 5"
-echo "Laupäev - 6"
+echo     "Reede - 5"
+echo   "Laupäev - 6"
+echo  "Pühapäev - 7"
 sleep 1s
 echo -n "Palun sisestage päeva number, millal alustate reisi: "; read reis
 sleep 1s
@@ -24,25 +24,33 @@ nadalapaevad=$(($paevad%7))
 naasmine=$(($reis+$nadalapaevad))
 sleep 1s
 # arvutame, mis päeval reisilt naastakse.
-if [ $naasmine = 0 ]; then
-	naasmine="Pühapäeval"
-fi
 if [ $naasmine = 1 ]; then
-	naasmine="Esmaspäeval"
+	naasmine="esmaspäeval"
 fi
 if [ $naasmine = 2 ]; then
-	naasmine="Teisipäeval"
+	naasmine="teisipäeval"
 fi
 if [ $naasmine = 3 ]; then
-	naasmine="Kolmapäeval"
+	naasmine="kolmapäeval"
 fi
 if [ $naasmine = 4 ]; then
-	naasmine="Neljapäeval"
+	naasmine="neljapäeval"
 fi
 if [ $naasmine = 5 ]; then
-	naasmine="Reedel"
+	naasmine="reedel"
 fi
 if [ $naasmine = 6 ]; then
 	naasmine="laupäeval"
 fi
+if [ $naasmine = 7 ]; then
+	naasmine="pühapäeval"
+fi
+
+ # väljastame tulemuse
 echo "Reisilt jõuate Te tagasi $naasmine"
+
+# siit lõppeb skript
+
+# viimane update - tehtud skripti veidi mugavamaks kasutajale
+# kuupäevade numbrid muudetud
+
