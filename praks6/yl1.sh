@@ -2,6 +2,12 @@
 
 # siit hakkab skript
 
+
+# skripti tuleb kasutada järgneval kujul:
+# asukoht/skriptini.sh number
+# näide:./yl1.sh 3
+# Arv 3 on paaritu.
+
 # see skript küsib kasutaja käest ühe täisarvu ning teeb omad järeldused,
 # kas arv on paaris või paaritu.
 
