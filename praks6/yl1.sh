@@ -5,7 +5,12 @@
 # see skript küsib kasutaja käest ühe täisarvu ning teeb omad järeldused,
 # kas arv on paaris või paaritu.
 
-echo -n "Sisestage siia suvaline täisarv: "; read arv
+# teame, et failinimi on esimesel positsioonil passing argumenti kasutades
+failinimi=$0
+
+# arv on teisel positsioonil
+arv=$1
+
 
 # nüüd tuleb arvutada jääk, kui arv jagada (2) kahega.
 
