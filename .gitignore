@@ -1,5 +1,11 @@
 # file extensions to ignore
 
+#ignore praks4 subfolders
+praks4/as
+praks4/backup
+praks4/test
+
+# ignore .log and txt
 .log
 .txt
 
