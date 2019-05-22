@@ -10,8 +10,8 @@ if [ $arv -lt 1 ] || [ $arv -gt 12 ]; then
 else
 
 case $arv in
-	"1")
- 		echo "See on jaanuar";;
+
+	"1")	echo "See on jaanuar";;
 	
 	"2")	echo "See on veebruar";;
 
