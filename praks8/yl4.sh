@@ -1,11 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 # skripti algus - see skript tuvastab, kas arv on algarv või mitte
 
-echo -n "Sisesta suvaline arv: \c"; read arv
-
-# teeme kontrolli
-
+echo -n "Palun sisestage täisarv: "; read arv
+	
 if [ $arv -eq 0 -o $arv -eq 1 ]; then
 	echo "$arv ei ole algarv."
 else
@@ -22,5 +20,4 @@ else
 		echo "$arv ei ole algarv"
 	fi
 fi
-
 # skripti lõpp
